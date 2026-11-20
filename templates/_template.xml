@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>APP_NAME</Name>
+  <Repository>ghcr.io/sushiflux/IMAGE_NAME:latest</Repository>
+  <Registry>https://github.com/sushiflux/REPO_NAME/pkgs/container/IMAGE_NAME</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/sushiflux/REPO_NAME/issues</Support>
+  <Project>https://github.com/sushiflux/REPO_NAME</Project>
+  <Overview>
+    SHORT_ENGLISH_DESCRIPTION&#xD;
+    &#xD;
+    SHORT_GERMAN_DESCRIPTION&#xD;
+    &#xD;
+    Requirements / Voraussetzungen: PREREQUISITES
+  </Overview>
+  <Requires>PREREQUISITES_EN / PREREQUISITES_DE</Requires>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/sushiflux/unraid-templates/main/templates/TEMPLATE_FILE.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/sushiflux/REPO_NAME/main/docs/icon.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/sushiflux/REPO_NAME/main/docs/screenshots/overview.png</Screenshot>
+  <ReadMe>https://github.com/sushiflux/REPO_NAME#readme</ReadMe>
+  <Config Name="Web UI Port" Target="8080" Default="8080" Mode="tcp" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="AppData Config" Target="/config" Default="/mnt/cache/appdata/IMAGE_NAME" Mode="rw" Description="Persistent configuration and SQLite database (use cache/pool drive)" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/IMAGE_NAME</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID (Unraid default: 99)" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID (Unraid default: 100)" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+</Container>
