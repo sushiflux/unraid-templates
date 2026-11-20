@@ -1,0 +1,14 @@
+<CommunityApplications>
+  <Profile>
+**SushiFlux's Repository** – Unraid Community Applications templates for self-hosted apps and tools by SushiFlux.
+
+Each application lives in its own public GitHub repository for source code, documentation, and container releases (`ghcr.io/sushiflux/...`), while all Unraid templates are maintained here in one place.
+
+**SushiFlux's Repository** – Unraid Community Applications Templates für selbstgehostete Apps und Tools von SushiFlux.
+
+Jede Anwendung besitzt ihr eigenes öffentliches GitHub-Repository für Quellcode, Handbücher und Container-Releases (`ghcr.io/sushiflux/...`), während alle Unraid-Templates hier zentral gepflegt werden.
+  </Profile>
+  <Icon>https://raw.githubusercontent.com/sushiflux/unraid-templates/main/icon.png</Icon>
+  <WebPage>https://github.com/sushiflux/unraid-templates</WebPage>
+  <Forum>https://github.com/sushiflux/unraid-templates</Forum>
+</CommunityApplications>

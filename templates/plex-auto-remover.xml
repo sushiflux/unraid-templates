@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PlexAutoRemover</Name>
+  <Repository>ghcr.io/sushiflux/plex-auto-remover:latest</Repository>
+  <Registry>https://github.com/sushiflux/Plex_Auto_Remover/pkgs/container/plex-auto-remover</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/sushiflux/Plex_Auto_Remover/issues</Support>
+  <Project>https://github.com/sushiflux/Plex_Auto_Remover</Project>
+  <Overview>
+    Plex Auto Remover inspects your Plex Media Server on a schedule (e.g. every 3 months) for movies and TV shows that have never been watched or have not been touched for a configurable number of days. You review and confirm deletions in the built-in Web UI (with optional Discord webhook reminder).&#xD;
+    &#xD;
+    Plex Auto Remover prüft deinen Plex Media Server regelmäßig (z. B. alle 3 Monate) auf Filme und Serien, die noch nie geschaut oder seit einer konfigurierbaren Anzahl Tage nicht mehr berührt wurden. Du prüfst und bestätigst die Löschung bequem in der Web-GUI (optional mit Discord-Webhook-Erinnerung).&#xD;
+    &#xD;
+    Requirements / Voraussetzungen: Plex Media Server URL &amp; X-Plex-Token; SQLite database should live on a cache/pool path such as /mnt/cache/appdata/plex-auto-remover.
+  </Overview>
+  <Requires>Plex Media Server URL &amp; Token / Plex Media Server URL &amp; Token</Requires>
+  <Category>MediaApp:Video Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/sushiflux/unraid-templates/main/templates/plex-auto-remover.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/sushiflux/Plex_Auto_Remover/main/docs/icon.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/sushiflux/Plex_Auto_Remover/main/docs/screenshots/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/sushiflux/Plex_Auto_Remover/main/docs/screenshots/candidates.png</Screenshot>
+  <ReadMe>https://github.com/sushiflux/Plex_Auto_Remover#readme</ReadMe>
+  <Config Name="Web UI Port" Target="8080" Default="5281" Mode="tcp" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">5281</Config>
+  <Config Name="AppData Config" Target="/config" Default="/mnt/cache/appdata/plex-auto-remover" Mode="rw" Description="SQLite database location (use cache/pool drive)" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/plex-auto-remover</Config>
+  <Config Name="Media Share" Target="/media" Default="/mnt/user/media" Mode="rw" Description="Root path to your Unraid media shares" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/media</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID (Unraid default: 99)" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID (Unraid default: 100)" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+</Container>
